@@ -1,0 +1,34 @@
+.skills {
+    &__title {
+       margin-bottom: 1rem;
+    }
+    &__container {
+        display: flex;
+        &__item {
+            list-style: none;
+            border:1px solid $color-tertiary;
+            padding: 1rem 1.5rem;
+            background-color: $color-white;
+            &:first-child {
+                border-top-left-radius: 1rem;
+                border-bottom-left-radius: 1rem;
+                border-left-width: 0px;
+            }    
+            &:last-child {
+                border-top-right-radius: 1rem;
+                border-bottom-right-radius: 1rem;
+                border-right-color: $color-tertiary;
+            }
+        }  
+        &__active {
+            background-color: $color-tertiary;
+            border-right: 2px solid $color-white;
+            border-top-width: 0px;
+            border-bottom-width: 0px;
+        }   
+        &__item#{&}__active:last-child {
+            border-right-width: 0;
+        }
+    }
+}
+

@@ -1,0 +1,24 @@
+// COLORS
+$color-primary: #549f93;
+
+$color-secondary: #fffbed;
+
+$color-tertiary: #e0777d;
+
+$color-grey-light: #eee;
+$color-grey-dark: #333;
+
+$color-white: #fff;
+$color-black: #000;
+
+$background-color: rgba(darken($color-secondary, 10%), .5);
+
+// FONT
+$default-font-size: 1.6rem;
+
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em;   // 1200px
+$bp-large: 62.5em;   // 1000px
+$bp-medium: 50em;    // 800px;
+$bp-small: 37.5em;    // 600px;
