@@ -38,7 +38,7 @@ const Modal = ({activeBreed, handleClose, modalType}) => {
                         </span>
                     </button>
 
-                    <h3 className="modalTitle">{name} {alt_names ? <span style={{fontSize:'2.1rem'}}>{`(${alt_names})`}</span> : ''}</h3>
+                    <h3 className="modalTitle">{name} {alt_names && alt_names.trim() !== '' ? <span>{`(${alt_names})`}</span> : ''}</h3>
                     <div className="modalContent">
                     { modalType === 'images' ?
                         <div className="gallery">

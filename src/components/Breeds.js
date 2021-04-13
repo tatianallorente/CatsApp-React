@@ -51,9 +51,12 @@ const Breeds = ({searchBreed}) => {
         setCurrentPage(e.selected);
     };
 
-
-    const searchResults = totalBreeds.filter(breed => breed.name.toLowerCase().includes(searchBreed.search_breed));
-                   
+    // Case insensitive
+    let searchResults = [];
+    if (Object.keys(searchBreed).length > 0 && searchBreed.search_breed !== '') {
+        searchResults = totalBreeds.filter(breed => breed.name.toLowerCase().includes(searchBreed.search_breed.toLowerCase()));
+    }
+               
     return (
         <> 
         {loading 

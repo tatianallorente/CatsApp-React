@@ -215,6 +215,9 @@ footer {
       @media only screen and (min-width: 75em) {
         .modal__content__inner {
           max-width: 50vw; } }
+      @media only screen and (max-width: 50em) {
+        .modal__content__inner {
+          padding: 35px 25px; } }
       .modal__content__inner h3:not(.modalTitle) {
         margin-top: 2rem; }
 
@@ -228,6 +231,10 @@ footer {
   border-radius: 50%;
   background-color: transparent;
   cursor: pointer; }
+  @media only screen and (max-width: 50em) {
+    .closeButton {
+      top: 0;
+      right: 0; } }
   .closeButton:hover, .closeButton:focus {
     background-color: #fff6d9;
     outline: none; }
@@ -248,6 +255,14 @@ footer {
   color: white;
   border-radius: 5px;
   padding: 10px; }
+  @media only screen and (max-width: 50em) {
+    .modalTitle {
+      padding: 5px; } }
+  .modalTitle span {
+    font-size: 2.1rem; }
+    @media only screen and (max-width: 37.5em) {
+      .modalTitle span {
+        display: none; } }
 
 /* --- Modal Images --- */
 .gallery {
@@ -279,22 +294,35 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media only screen and (max-width: 50em) {
+    .modalContent__main {
+      flex-direction: column; } }
   .modalContent__main-picture {
     width: 45%;
     border: 5px solid #787878;
     max-height: 30vh; }
+    @media only screen and (max-width: 50em) {
+      .modalContent__main-picture {
+        width: auto;
+        max-width: 100%; } }
   .modalContent__main-text {
     padding-left: 4rem; }
+    @media only screen and (max-width: 50em) {
+      .modalContent__main-text {
+        padding-left: 0;
+        padding-top: 2rem; } }
 
 .modalTitlesInline {
   display: inline-block; }
 
 .skills-component {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-template-columns: repeat(3, minmax(150px, 1fr));
   justify-items: center;
   grid-gap: 1rem; }
+  @media only screen and (max-width: 37.5em) {
+    .skills-component {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); } }
 
 .chip-container {
   display: flex;

@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/CatsApp-React/static/css/main.e4949dc6.chunk.css",
-    "main.js": "/CatsApp-React/static/js/main.400e8910.chunk.js",
-    "main.js.map": "/CatsApp-React/static/js/main.400e8910.chunk.js.map",
+    "main.css": "/CatsApp-React/static/css/main.f6321b76.chunk.css",
+    "main.js": "/CatsApp-React/static/js/main.63be33a4.chunk.js",
+    "main.js.map": "/CatsApp-React/static/js/main.63be33a4.chunk.js.map",
     "runtime-main.js": "/CatsApp-React/static/js/runtime-main.4a8cdc9c.js",
     "runtime-main.js.map": "/CatsApp-React/static/js/runtime-main.4a8cdc9c.js.map",
     "static/js/2.665f9d62.chunk.js": "/CatsApp-React/static/js/2.665f9d62.chunk.js",
     "static/js/2.665f9d62.chunk.js.map": "/CatsApp-React/static/js/2.665f9d62.chunk.js.map",
     "index.html": "/CatsApp-React/index.html",
-    "static/css/main.e4949dc6.chunk.css.map": "/CatsApp-React/static/css/main.e4949dc6.chunk.css.map",
+    "static/css/main.f6321b76.chunk.css.map": "/CatsApp-React/static/css/main.f6321b76.chunk.css.map",
     "static/js/2.665f9d62.chunk.js.LICENSE.txt": "/CatsApp-React/static/js/2.665f9d62.chunk.js.LICENSE.txt",
     "static/media/styles.scss": "/CatsApp-React/static/media/header.fbbb4de6.jpg",
     "static/media/no_img.04fe48ca.png": "/CatsApp-React/static/media/no_img.04fe48ca.png"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.4a8cdc9c.js",
     "static/js/2.665f9d62.chunk.js",
-    "static/css/main.e4949dc6.chunk.css",
-    "static/js/main.400e8910.chunk.js"
+    "static/css/main.f6321b76.chunk.css",
+    "static/js/main.63be33a4.chunk.js"
   ]
 }

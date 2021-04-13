@@ -23,6 +23,9 @@
             @media only screen and (min-width: $bp-largest) {
                 max-width: 50vw; 
             }
+            @media only screen and (max-width: $bp-medium) {
+                padding: 35px 25px;
+            }
             & h3:not(.modalTitle) {
                 margin-top: 2rem;
             }
@@ -40,6 +43,10 @@
     border-radius: 50%;
     background-color: transparent;
     cursor: pointer;
+    @media only screen and (max-width: $bp-medium) {
+        top: 0;
+        right: 0;
+    }
     &:hover, &:focus {
         background-color: darken($color-secondary, 4%);
         outline: none;
@@ -64,6 +71,16 @@
     color: white;
     border-radius: 5px;
     padding: 10px;
+    @media only screen and (max-width: $bp-medium) {
+        padding: 5px;
+    }
+    span {
+        font-size:2.1rem;
+        @media only screen and (max-width: $bp-small) {
+            display: none;
+        }
+    }
+
 }
 
 
@@ -108,13 +125,24 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+    }
     &-picture {
         width: 45%;
         border: 5px solid lighten($color-grey-dark, 27%);
         max-height: 30vh;
+        @media only screen and (max-width: $bp-medium) {
+            width: auto;
+            max-width: 100%;
+        }
     }
     &-text{
         padding-left: 4rem;
+        @media only screen and (max-width: $bp-medium) {
+            padding-left: 0;
+            padding-top: 2rem;
+        }
     }
 }
 
@@ -124,10 +152,12 @@
 
 .skills-component {
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-template-columns: repeat(3, minmax(150px, 1fr));
     justify-items: center;
     grid-gap: 1rem;
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
 }
 
 .chip-container {
