@@ -23,7 +23,18 @@
             color: $color-white;
         }
         &.page-link.disabled {
-            display: none;
+            pointer-events: none;
+            a {
+                color: lighten($color-grey-dark, 50%);
+                border-top-color: lighten($color-grey-dark, 50%);
+                border-bottom-color: lighten($color-grey-dark, 50%);
+            }
+            &:first-child a {
+                border-left-color: lighten($color-grey-dark, 50%);
+            }
+            &:last-child a {
+                border-right-color: lighten($color-grey-dark, 50%);
+            }
         }
     }
     & a {
