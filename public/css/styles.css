@@ -144,7 +144,15 @@ footer {
       background: #e0777d;
       color: #fff; }
     .pagination li.page-link.disabled {
-      display: none; }
+      pointer-events: none; }
+      .pagination li.page-link.disabled a {
+        color: #b3b3b3;
+        border-top-color: #b3b3b3;
+        border-bottom-color: #b3b3b3; }
+      .pagination li.page-link.disabled:first-child a {
+        border-left-color: #b3b3b3; }
+      .pagination li.page-link.disabled:last-child a {
+        border-right-color: #b3b3b3; }
   .pagination a {
     border: 1px solid #666666;
     border-right-width: 0px;

@@ -7,7 +7,7 @@
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
-    "node-sass": "^5.0.0",
+    "node-sass": "^8.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-paginate": "^7.1.2",
@@ -15,9 +15,9 @@
     "web-vitals": "^1.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build:sass": "node-sass src/sass/styles.scss public/css/styles.css",
-    "build": "npm run build:sass && react-scripts build",
+    "build": "npm run build:sass && react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
