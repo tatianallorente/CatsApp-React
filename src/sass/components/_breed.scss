@@ -1,56 +1,55 @@
 .breed-card {
-    background-color: lighten($color-grey-light, 5%);
-    box-shadow: 3px 3px 5px darken($color-grey-light, 30%);
-    border-radius: 5px;
-    display:flex;
+	background-color: lighten($color-grey-light, 5%);
+	box-shadow: 3px 3px 5px darken($color-grey-light, 30%);
+	border-radius: 5px;
+	display:flex;
 
-    transition: transform .2s;
-    &__img {
-        cursor: pointer;
-        max-width: 50%;
-        object-fit: cover;
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
-        transition: opacity .1s ease-in;
-        opacity: 1;
-        max-height: 100%;
-        height: 25rem;
-        &:hover {
-            transition: opacity .5s ease-out;
-            opacity: .7;
-        }
-    }    
-    &__content {
-        padding: 1rem 1.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        &-txt {
-            & h3 {
-                text-align: center;
-            }
-            & p {
-                padding: 10px 0px;
-                font-size: 1.4rem;
-            }
-        }
-        &-btn {
-            padding: 1rem;
-            background-color: $color-primary;
-            border: none;
-            border-radius: 3px;
-            color: $color-white;
-            cursor: pointer;
-            font-family: 'Open Sans', sans-serif;
-            font-size: $default-font-size;
-            &:hover, &:active, &:focus {
-                background-color: darken($color-primary, 20%);
-                outline: none;
-            }
-        }
-    }
-    &:hover {
-        transform: translateY(-.8rem) scale(1.03);
-        
-    }
+	transition: transform .2s;
+	&__img {
+		cursor: pointer;
+		max-width: 50%;
+		object-fit: cover;
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+		transition: opacity .1s ease-in;
+		opacity: 1;
+		max-height: 100%;
+		height: 25rem;
+		&:hover {
+			transition: opacity .5s ease-out;
+			opacity: .7;
+		}
+	}
+	&__content {
+		padding: 1rem 1.5rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		&-txt {
+			& h3 {
+				text-align: center;
+			}
+			& p {
+				padding: 10px 0px;
+				font-size: 1.4rem;
+			}
+		}
+		&-btn {
+			padding: 1rem;
+			background-color: $color-primary;
+			border: none;
+			border-radius: 3px;
+			color: $color-white;
+			cursor: pointer;
+			font-family: 'Open Sans', sans-serif;
+			font-size: $default-font-size;
+			&:hover, &:active, &:focus {
+				background-color: darken($color-primary, 20%);
+				outline: none;
+			}
+		}
+	}
+	&:hover {
+		transform: translateY(-.8rem) scale(1.03);
+	}
 }

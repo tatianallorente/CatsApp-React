@@ -1,39 +1,42 @@
+import { URL_BREEDS } from "../helpers/constants"
 
-export const getBreeds = async(currentPage, limit = '') => {
 
-    const api_key = '3a6c399a-f92b-4e8c-b5a5-142c8effa2f1';
+export const getBreeds = async (currentPage, limit = '') => {
 
-    let url_breeds = `https://api.thecatapi.com/v1/breeds?api_key=${api_key}`;
+	let url_breeds = URL_BREEDS;
 
-    if (limit !== '') {
-        url_breeds = `https://api.thecatapi.com/v1/breeds?api_key=${api_key}&limit=${limit}&page=${currentPage}&order=Asc`;
-    }
+	if (limit !== '') {
+		url_breeds = `${url_breeds}&limit=${limit}&page=${currentPage}&order=Asc`;
+	}
 
-    const resp = await fetch(url_breeds);
-    const data = await resp.json();
+	try {
+		const resp = await fetch(url_breeds);
 
-    //console.log(resp.headers)
+		if (resp.ok) {
+			const breeds = await resp.json();
 
-    for (let pair of resp.headers.entries()) {
-    //console.log(pair[0])
-        switch (pair[0]) {
-            case 'pagination-count':
-                data['paginationCount'] = pair[1];
-            break;
-            case 'pagination-limit':
-                data['paginationLimit'] = pair[1];
-            break;
-            case 'pagination-page':
-                data['paginationPage'] = pair[1];
-            break;
-            default:
-                break;
-        }
-    }
+			for (let pair of resp.headers.entries()) {
+				switch (pair[0]) {
+					case 'pagination-count':
+						breeds['paginationCount'] = pair[1];
+					break;
+					case 'pagination-limit':
+						breeds['paginationLimit'] = pair[1];
+					break;
+					case 'pagination-page':
+						breeds['paginationPage'] = pair[1];
+					break;
+					default:
+						break;
+				}
+			}
 
-    //console.log(data)
-    //console.log(url_breeds)
-
-    return data;
+			return breeds;
+		} else {
+			return [];
+		}
+	} catch (error) {
+		console.error(error);
+		return [];
+	}
 }
-
