@@ -26,7 +26,7 @@
 			@media only screen and (max-width: $bp-medium) {
 				padding: 35px 25px;
 			}
-			& h3:not(.modalTitle) {
+			& h3:not(.modalTitle):not(.msg-error__title) {
 				margin-top: 2rem;
 			}
 		}

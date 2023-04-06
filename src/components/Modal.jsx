@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 import SkillsBar from './SkillsBar';
 import Spinner from './spinner/Spinner';
+import Error from './Error';
 import { getBreedImages } from '../services';
 import no_img from '../img/no_img.png';
 
@@ -43,11 +44,13 @@ const Modal = ({activeBreed, handleClose, modalType}) => {
               <div className="gallery">
                 {loading
                   ? <Spinner/>
-                  : images.map( (img) =>
+                  : images.length > 0
+                    ? images.map( (img) =>
                       <div className="gallery__item" key={img}>
                         <img src={img} alt={name}/>
                       </div>
                     )
+                    : <Error msg="No se encontraron resultados"/>
                 }
               </div>
             : <>
