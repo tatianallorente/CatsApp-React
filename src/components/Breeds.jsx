@@ -56,35 +56,3 @@ const Breeds = ({searchBreed}) => {
 }
 
 export default Breeds;
-
-/*
-      {loading
-        ? <Spinner/>
-        : Object.keys(searchBreed)?.length > 0 && searchBreed?.search_breed !== ''
-          ? searchResults.length > 0
-            ? <div className="breeds-cards">
-                {searchResults.map(filteredBreed => (
-                  <Breed key={filteredBreed.id} breed={filteredBreed} />
-                ))}
-              </div>
-            : <Error msg="No se encontraron resultados"/>
-          : <>
-              <Pagination
-                totalPages={totalPages}
-                handlePagination={handlePagination}
-                currentPage={currentPage}
-              />
-              <div className="breeds-cards">
-                {breeds.map( breed => (
-                  <Breed key={breed.id} breed={breed} />
-                ))}
-              </div>
-              <Pagination
-                totalPages={totalPages}
-                handlePagination={handlePagination}
-                currentPage={currentPage}
-                bottom={true}
-              />
-            </>
-      }
-*/

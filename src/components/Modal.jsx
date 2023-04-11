@@ -45,32 +45,32 @@ const Modal = ({activeBreed, handleClose, modalType}) => {
                 {loading
                   ? <Spinner/>
                   : images.length > 0
-                    ? images.map( (img) =>
-                      <div className="gallery__item" key={img}>
-                        <img src={img} alt={name}/>
-                      </div>
-                    )
+                    ? images.map(img =>
+                        <div className="gallery__item" key={img}>
+                          <img src={img} alt={name}/>
+                        </div>
+                      )
                     : <Error msg="No se encontraron resultados"/>
                 }
               </div>
             : <>
                 <div className="modalContent__main">
-                  <img src={(image && Object.keys(image).length > 0 ) ? image.url : no_img} alt={name} className="modalContent__main-picture"/>
+                  <img src={(image && Object.keys(image).length > 0 ) ? image.url : no_img} alt={name} className="modalContent__main-picture" />
                   <div className="modalContent__main-text">
                     <p>{description}</p>
                     <div>
                         <h3>Temperamento</h3>
                         <div className="chip-container">
-                        {
-                          temperament.split(',').map( (t) => <span key={t}className="chip">{t}</span>)
-                        }
+                        {temperament.split(',').map(temperamentChip =>
+                          <span key={temperamentChip} className="chip">{temperamentChip}</span>
+                        )}
                         </div>
                     </div>
                   </div>
                 </div>
 
                 <h3 className="modalTitlesInline">País de origen:</h3>
-                <span>{origin}</span>
+                <span> {origin}</span>
 
                 <br/>
 
@@ -79,15 +79,13 @@ const Modal = ({activeBreed, handleClose, modalType}) => {
 
                 <h3>Skills</h3>
                 <div className="skills-component">
-                  {Object.entries(skills).map((skill) => {
-                    return (
-                      <SkillsBar
-                        key={skill[0]}
-                        skillName={skill[0]}
-                        skillValue={skill[1]}
-                      />
-                    )
-                  })}
+                  {Object.entries(skills).map(skill =>
+                    <SkillsBar
+                      key={skill[0]}
+                      skillName={skill[0]}
+                      skillValue={skill[1]}
+                    />
+                  )}
                 </div>
               </>
             }
