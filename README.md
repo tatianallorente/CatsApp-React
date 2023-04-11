@@ -1,6 +1,7 @@
 # Cats App
 
 > Aplicación SPA para ver las diferentes razas de gatos, usando la API thecatapi.\
+> Desarrollo y diseño de la interfaz. Uso de metodología BEM para los estilos con el preprocesador SASS y lenguaje SCSS.\
 > Demo: https://tatianallorente.github.io/CatsApp-React/
 ---
 # Tecnologías usadas
